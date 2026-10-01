@@ -1,29 +1,46 @@
 {
-  "name": "omnibus/dtdc",
-  "description": "",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Marco Meyer",
-      "email": "marco.meyer@glitchr.io",
-      "homepage": "http://glitchr.io/"
+    "name": "omnibus/dtdc",
+    "type": "library",
+    "description": "Omnibus DTDC: consignments and labels, cancellations, tracking - the DTDC customer integration API.",
+    "keywords": [
+        "shipping",
+        "carrier",
+        "omnibus",
+        "dtdc"
+    ],
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Marco Meyer",
+            "email": "marco.meyer@glitchr.io"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "glitchr/omnibus": "^2.0@dev",
+        "symfony/http-client-contracts": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "symfony/http-client": "^6.4|^7.0|^8.0"
+    },
+    "suggest": {
+        "symfony/http-client": "The HTTP client the carrier talks through"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omnibus\\Dtdc\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnibus\\Dtdc\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
     }
-  ],
-  "require": {
-    "php": ">=7.4"
-  },
-  "require-dev": {
-  },
-  "suggest": {
-  },
-  "autoload": {
-    "psr-4": {
-      "Omnibus\\DTDC\\": ""
-    }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0-dev"
-    }
-  }
 }
